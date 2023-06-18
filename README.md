@@ -32,49 +32,93 @@
     from sklearn import linear_model
     from sklearn.utils import shuffle 
     ```
-    
-
-   
-    <!-- ```python import sklearn ```
-    ```python from sklearn import linear_model ```
-    ```python from sklearn.utils import shuffle ``` -->
 
 
 ## Steps of the project:
 
 STEP 1:
 
-We have to read in our dataset. Using panda.
+- We have to read in our dataset. Using panda.
 
-    ```python data = pd.read_csv("student-mat.csv"), sep=";" ```
+    ```python 
+    data = pd.read_csv("student-mat.csv"), sep=";"
+    ```
 
-    sep -> refers to what separates each row, in our case ';'
+    **sep**, refers to what separates each row, in our case ';'
 <br>
 
 STEP 2:
-How to trim the data set, This allows us to get specific columns that we need.
-```python data = data[["G1", "G2", "G3", "studytime", "absences", "failures"]] ```
-In our case we pass in the the attributes we listed above.
+
+- How to trim the data set, This allows us to get specific columns that we need.
+
+    ```python 
+    data = data[["G1", "G2", "G3", "studytime", "absences", "failures"]] 
+    ```
+
+- In our case we pass in the the attributes we listed above.
 NB: preferably interger fields.
 <br>
 
 STEP 3: 
-Here we define what we want to predict. The label.
-```python predict = "G3" ```
-```python x = np.array(data.drop([predict], 1)) ```
-This line defines attributes of our predicted label 'G3'.
-```python y = np.array(data[predict]) ```
-This line gives only the 'G3' value.
+
+- Here we define what we want to predict. The label.
+
+    ```python
+    predict = "G3"
+    ```
+
+    ```python
+    x = np.array(data.drop([predict], 1)) 
+    ```
+
+- This line defines attributes of our predicted label 'G3'.
+  
+    ```python 
+    y = np.array(data[predict]) 
+    ```
+- This line gives only the 'G3' value.
+  
 NB: in 'x', the 'G3' label is avoided.
-NOTE: in short the python snippets X and Y are similar only that in X-> "G3" is dropped/ IT WON'T BE DISPLAYED INCLUDED.
-And in Y -> "G3" IS THE ONLY ONE THAT WILL BE DISPLAYED.
+
+NOTE: in short the python snippets X and Y are similar only
+that:
+- in X-> "G3" is dropped/ IT WON'T BE DISPLAYED INCLUDED.
+
+- And in Y -> "G3" IS THE ONLY ONE THAT WILL BE DISPLAYED.
 <br>
 
 STEP 4:
-We divide x & y into four('x train', 'y train', 'x test', 'y test'). Using sklearn!
-```python x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1) ```
-This line splits our data X and Y, This is for TRAINING & TESTING.
-The line 'test_size=0.1', means that from our dataset 10% will be used for testing.
+
+- We divide x & y into four('x train', 'y train', 'x test', 'y test'). Using sklearn!
+  
+    ```python
+    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1) 
+    ```
+
+- This line splits our data X and Y, This is for TRAINING & TESTING.
+  
+- The line 'test_size=0.1', means that from our dataset 10% will be used for testing.
+
+STEP 5:
+- create the training model.
+  
+    ```python 
+    linear = linear_model.LinearRegression()
+    linear.fit(x_train, y_train)
+    ```
+- **linear-fit** , finds the best fit line 📈
+  
+![Web capture_19-6-2023_02130_www bing com](https://github.com/edyprogramz/Predicting-Exam-Students-Grades/assets/116636391/8f867b95-49f7-44e3-b7be-1ad684fbe1f7)
+
+    ```python 
+    accuracy = linear.score(x_test, y_test)
+    ```
+
+- **linear-score**, finds how accurate the model is!
+  
+
+
+
 
     ```python ```
     ```python ```

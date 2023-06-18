@@ -27,16 +27,27 @@
 
 4. sklearn
    
-    ```python import sklearn ```
+    ```python 
+    import sklearn 
+    from sklearn import linear_model
+    from sklearn.utils import shuffle 
+    ```
+    
+
+   
+    <!-- ```python import sklearn ```
     ```python from sklearn import linear_model ```
-    ```python from sklearn.utils import shuffle ```
+    ```python from sklearn.utils import shuffle ``` -->
 
 
 ## Steps of the project:
 
 STEP 1:
+
 We have to read in our dataset. Using panda.
+
     ```python data = pd.read_csv("student-mat.csv"), sep=";" ```
+
     sep -> refers to what separates each row, in our case ';'
 <br>
 

@@ -14,15 +14,18 @@
 1. pandas
    
     ```python import pandas as pd ```
+
     Helps read our dataset easily, a better visualization.
 
 2. Numpy
    
     ```python import numpy as np ```
+
     Helps to deal with arrays, since python is not as effective.
 
 3. matplotlib
     ```python ```
+
     - *responsible for the graphical representantion of our data*
 
 4. sklearn
@@ -109,19 +112,61 @@ STEP 5:
 - **linear-fit** , finds the best fit line 📈
   
 ![Web capture_19-6-2023_02130_www bing com](https://github.com/edyprogramz/Predicting-Exam-Students-Grades/assets/116636391/8f867b95-49f7-44e3-b7be-1ad684fbe1f7)
+<br>
 
-    ```python 
-    accuracy = linear.score(x_test, y_test)
-    ```
+```python 
+accuracy = linear.score(x_test, y_test)
+```
 
 - **linear-score**, finds how accurate the model is!
   
+- To view the **Coefficient**, **Intercept** & **Accuracy**:
+   
+    ```python
+    print(accuracy)
+    print('Coefficient:', linear.coef_)
+    print('Intercept: ', linear.intercept_)
+    ```
+NOTE: You will have 5 coefficient or more depending on the number of you attributes.
 
+STEP 6:
+
+    ```python 
+    predictions = linear.predict(x_test)
+
+    for x in range(len(predictions)):
+        print(predictions[x], x_test[x], y_test[x])
+        
+    ```
+
+- On the first line our model makes a prediction.
+- A for loop to iterate through each prediction!
+  
+**predictions[x]**  *gives what grade the model predicted*
+
+**x_test[x]**    *gives the original attributes eg 'studytime' etc.*
+
+**y_test[x]**    *gives the actual grade of CAT 3*
+
+The results will look like this:
+
+| Model Prediction | original attributes | Actual Score |
+|:---------------- |:-------------------:|-------------:|
+|5.870112162153946 | [7 7 2 2 1] | 7 |
+|5.452722721882618 |[ 7  6  2 10  0]| 6|
+|8.491827220328435 | [10  9  2  0  0] | 9 |
+|9.219306681367364 |[11  9  1 19  1] | 10|
+|15.633495531267252 | [16 15  2 10  0] | 15|
+|10.192528017953217  |[ 9 11  3  2  0] | 11|
 
 
 
     ```python ```
     ```python ```
+    ```python ```
+    ```python ```
+    ```python ```
+
     ```python ```
 
 

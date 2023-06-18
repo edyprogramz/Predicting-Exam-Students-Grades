@@ -24,7 +24,11 @@
     Helps to deal with arrays, since python is not as effective.
 
 3. matplotlib
-    ```python ```
+   
+    ```python 
+    import matplotlib.pyplot as pyplot
+    from matplotlib import style
+    ```
 
     - *responsible for the graphical representantion of our data*
 
@@ -35,6 +39,10 @@
     from sklearn import linear_model
     from sklearn.utils import shuffle 
     ```
+
+5. pickle
+   
+    ```python import pickle ```
 
 
 ## Steps of the project:

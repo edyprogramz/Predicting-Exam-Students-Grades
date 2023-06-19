@@ -44,6 +44,8 @@
    
     ```python import pickle ```
 
+    Helps to save our files after prediction.
+
 
 ## Steps of the project:
 
@@ -167,9 +169,20 @@ The results will look like this:
 |15.633495531267252 | [16 15  2 10  0] | 15|
 |10.192528017953217  |[ 9 11  3  2  0] | 11|
 
+STEP 7:
+
+- Saving our model
+- Finding the most accurate model
+
+```python
+with open("studentmodel.pickle", "wb") as f:
+    pickle.dump(linear, f)
+
+pickle_in = open("studentmodel.pickle", "rb")
+linear = pickle.load(pickle_in)
+```
 
 
-    ```python ```
     ```python ```
     ```python ```
     ```python ```

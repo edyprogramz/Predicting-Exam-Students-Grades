@@ -3,7 +3,7 @@
 
 ###  Attributes
 1. Studytime
-2. Absensce
+2. Absences
 3. Grade1 as "G1"
 4. Grade2 as "G2"
 

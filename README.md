@@ -182,13 +182,21 @@ pickle_in = open("studentmodel.pickle", "rb")
 linear = pickle.load(pickle_in)
 ```
 
+STEP 8: 
 
-    ```python ```
-    ```python ```
-    ```python ```
-    ```python ```
+## PLOTING
 
-    ```python ```
+```python 
+p = "G1"
+style.use("ggplot")
+pyplot.scatter(data[p], data["G3"])
+pyplot.xlabel(p)
+pyplot.ylabel("Final Grade")
+pyplot.show()
+```
+
+The END.
+
 
 
 
